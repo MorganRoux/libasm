@@ -4,6 +4,7 @@ global _main
 _main:
     mov       rax, 0x02000004         ; system call for write
     mov       rdi, 1                  ; file handle 1 is stdout
+    ;mov the address of [message] into rsi
     lea       rsi, [message]          ; address of string to output
     mov       rdx, 13                 ; number of bytes
     syscall                           ; invoke operating system to do the write
@@ -12,6 +13,8 @@ _main:
     syscall                           ; invoke operating system to exit
 
     section   .data
+
+;using default rel to silence warning about absolute adressing
 message:  
 default rel
     db        "Hello, World", 10      ; note the newline at the end
