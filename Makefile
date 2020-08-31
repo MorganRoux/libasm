@@ -1,4 +1,4 @@
-NAME		=	libft.a
+NAME		=	libasm.a
 
 T_NAME		=	test_libft
 
@@ -13,13 +13,13 @@ OBJS		=	${SRCS:.s=.o}
 
 CC			= 	nasm
 
-FLAGS		= 	-fmacho64
+FLAGS		= 	-felf64
 
 ${NAME}:		${OBJS}
 				ar rc ${NAME} ${OBJS}
 
 .s.o:			${SRCS}
-				${CC} ${FLAGS} -fmacho64 $< 
+				${CC} ${FLAGS} $< 
 
 all:			${NAME}
 

@@ -1,15 +1,15 @@
-    global _ft_write
-    extern ___error
+    global ft_write
+    extern __error
 
     section .text
-_ft_write:
+ft_write:
 
 
     mov rax, 0x2000004
     syscall
 
     push rbp
-    call ___error
+    call __error
     pop rbp
     mov dword [rax], 5
     mov rax, 13

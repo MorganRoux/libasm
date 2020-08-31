@@ -1,8 +1,8 @@
-    global _ft_strlen
+    global ft_strlen
 
     section .text
 
-_ft_strlen:             ;calling convention : see nasm tutorial
+ft_strlen:             ;calling convention : see nasm tutorial
     mov rcx, 0          ; pour comparaison
     cmp rcx, rdi
     je  end
