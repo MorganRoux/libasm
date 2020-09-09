@@ -22,10 +22,10 @@ int main() {
 	printf("strlen : %d\n", ft_strlen(str));
 	printf("strcpy : %s\n", ft_strcpy(str4, str2));
 	printf("strcmp : %d\n", ft_strcmp(str5, str2));
-   	printf("-ft_write : %d - %d\n",ft_write(1, str, 2), errno);
-    	i = ft_read(0, str6, 10);
-    	printf("ft_read : %d - %s\n", i, str6);
- 	str3 = ft_strdup(str);
-	printf("ft_strdup : %s", str3);
+   	printf("-ft_write : %d - %d\n",ft_write(66, str, 2), errno);
+   // 	i = ft_read(0, str6, 10);
+    //	printf("ft_read : %d - %s\n", i, str6);
+ //	str3 = ft_strdup(str);
+//	printf("ft_strdup : %s", str3);
     return (0);
 }

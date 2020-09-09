@@ -1,5 +1,5 @@
+    extern __errno_location
     global ft_write
-    extern _error
 
     section .text
 ft_write:
@@ -10,9 +10,9 @@ ft_write:
     syscall
     ; rax is already set by write
     push rbp
-    call _error
+    call __errno_location
     pop rbp
     mov dword [rax], 5
-    mov rax, 13
+    mov rax, 14
     ret
 
